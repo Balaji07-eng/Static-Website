@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,28 +7,37 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>🚀 Smart Productivity Dashboard</h1>
+<div class="container">
+    <h1>🚀 Smart Productivity Dashboard</h1>
+    <button onclick="toggleMode()">Toggle Dark Mode</button>
 
-        <button onclick="toggleMode()" class="toggle-btn">Toggle Dark Mode</button>
+    <div class="grid">
 
-        <h2 id="clock"></h2>
+        <div class="card">
+            <h3>🕒 Live Clock</h3>
+            <p id="clock"></p>
+        </div>
 
-        <div class="todo-section">
+        <div class="card">
+            <h3>🌤 Weather</h3>
+            <p id="weather">Loading...</p>
+        </div>
+
+        <div class="card">
+            <h3>💬 Motivational Quote</h3>
+            <p id="quote">Loading...</p>
+        </div>
+
+        <div class="card">
             <h3>📝 Task Manager</h3>
             <input type="text" id="taskInput" placeholder="Enter task">
-            <button onclick="addTask()">Add Task</button>
-
-            <p>Total Tasks: <span id="taskCount">0</span></p>
-
+            <button onclick="addTask()">Add</button>
             <ul id="taskList"></ul>
         </div>
+
     </div>
+</div>
 
-    <footer>
-        <p>© 2026 Balaji | Hosted on GitHub Pages</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
