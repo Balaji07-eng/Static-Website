@@ -22,6 +22,10 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=${apiKey}
         document.getElementById("weather").innerText = "Weather unavailable";
     });
 
+
+
+
+    
 // Load Quote Function
 function loadQuote() {
 
