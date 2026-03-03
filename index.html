@@ -1,29 +1,33 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Advanced GitHub Deploy</title>
+    <title>Smart Productivity Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>🚀 My Deployed Website</h1>
+    <div class="container">
+        <h1>🚀 Smart Productivity Dashboard</h1>
 
-    <!-- Dark Mode Toggle -->
-    <button onclick="toggleMode()">Toggle Dark Mode</button>
+        <button onclick="toggleMode()" class="toggle-btn">Toggle Dark Mode</button>
 
-    <!-- Digital Clock -->
-    <h2 id="clock"></h2>
+        <h2 id="clock"></h2>
 
-    <!-- To-Do Section -->
-    <div class="todo">
-        <h3>📝 My To-Do List</h3>
-        <input type="text" id="taskInput" placeholder="Enter task">
-        <button onclick="addTask()">Add</button>
-        <ul id="taskList"></ul>
+        <div class="todo-section">
+            <h3>📝 Task Manager</h3>
+            <input type="text" id="taskInput" placeholder="Enter task">
+            <button onclick="addTask()">Add Task</button>
+
+            <p>Total Tasks: <span id="taskCount">0</span></p>
+
+            <ul id="taskList"></ul>
+        </div>
     </div>
 
     <footer>
-        <p>Made by Balaji | Hosted on GitHub Pages</p>
+        <p>© 2026 Balaji | Hosted on GitHub Pages</p>
     </footer>
 
     <script src="script.js"></script>
