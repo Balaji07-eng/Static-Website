@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First GitHub Deploy</title>
+    <title>My Advanced GitHub Deploy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>🎉 Hello Balaji!</h1>
-    <p>This website is deployed using GitHub Pages.</p>
-    <button onclick="showMessage()">Click Me</button>
 
-    <script>
-        function showMessage() {
-            alert("Successfully Deployed 🚀");
-        }
-    </script>
+    <h1>🚀 My Deployed Website</h1>
+
+    <!-- Dark Mode Toggle -->
+    <button onclick="toggleMode()">Toggle Dark Mode</button>
+
+    <!-- Digital Clock -->
+    <h2 id="clock"></h2>
+
+    <!-- To-Do Section -->
+    <div class="todo">
+        <h3>📝 My To-Do List</h3>
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <footer>
+        <p>Made by Balaji | Hosted on GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
