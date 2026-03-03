@@ -22,12 +22,34 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=${apiKey}
         document.getElementById("weather").innerText = "Weather unavailable";
     });
 
-// Quote API
-fetch("https://api.quotable.io/random")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("quote").innerText = `"${data.content}"`;
-    });
+// Load Quote Function
+function loadQuote() {
+
+    fetch("https://type.fit/api/quotes")
+        .then(response => response.json())  // Convert to JSON
+        .then(data => {
+
+            // Pick random quote
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const randomQuote = data[randomIndex];
+
+            // Display quote
+            document.getElementById("quote").innerText =
+                `"${randomQuote.text}" - ${randomQuote.author || "Unknown"}`;
+
+        })
+        .catch(error => {
+
+            console.error("Error fetching quote:", error);
+
+            document.getElementById("quote").innerText =
+                "Quote unavailable. Check internet connection.";
+
+        });
+}
+
+// Call function when page loads
+loadQuote();
 
 // To-Do with LocalStorage
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
