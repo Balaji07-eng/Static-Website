@@ -43,7 +43,7 @@ function loadQuote() {
             console.error("Error fetching quote:", error);
 
             document.getElementById("quote").innerText =
-                "Quote unavailable. Check internet connection.";
+                "Quote unavailable";
 
         });
 }
