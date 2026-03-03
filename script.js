@@ -11,7 +11,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 // Weather API (Use OpenWeatherMap Free API)
-const apiKey = "YOUR_API_KEY";
+const apiKey = "f6efecf9bf189bb98b17853bb416f3d7";
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=${apiKey}&units=metric`)
     .then(res => res.json())
     .then(data => {
